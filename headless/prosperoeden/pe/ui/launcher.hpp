@@ -173,8 +173,8 @@ class Launcher
 
     // ---- a game's own settings by category, and the button mapping (game_options.cpp) ----
     // Categories, in the order of the game settings' rows: video, performance, audio, controls,
-    // language.
-    static constexpr int kGameOptionCategories = 5;
+    // system, language.
+    static constexpr int kGameOptionCategories = 6;
     void open_game_options(int category);
     void press_game_options(Key key);
     void draw_game_options(Canvas &c, float open);

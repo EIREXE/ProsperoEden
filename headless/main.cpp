@@ -1193,6 +1193,15 @@ int main(int argc, char** argv) {
                                             " (" + std::to_string(who.current + 1) + " of " +
                                             std::to_string(who.profiles.size()) + ")").c_str());
             }
+            Settings::values.rng_seed_enabled.SetValue(false);
+            if (game && guest) {
+                const auto rng_seed = Eden::LoadGameSettings(eden_game_title_id(guest)).rng_seed;
+                if (rng_seed >= 0) {
+                    Settings::values.rng_seed.SetValue(static_cast<u32>(rng_seed));
+                    Settings::values.rng_seed_enabled.SetValue(true);
+                    Eden::Report("launch", ("RNG seed: " + std::to_string(rng_seed)).c_str());
+                }
+            }
 #endif
             Core::System system;
             SCOPE_EXIT { game_contents.ClearAllEntries(); };

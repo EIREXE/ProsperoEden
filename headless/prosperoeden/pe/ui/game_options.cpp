@@ -33,10 +33,11 @@ enum Category : int
     category_performance,
     category_audio,
     category_controls,
+    category_system,
     category_language,
 };
 constexpr const char *kCategoryNames[] = {TR("Video"), TR("Performance"), TR("Audio"), TR("Controls"),
-                                          TR("Language")};
+                                          TR("System"), TR("Language")};
 // The Controls category's rows.
 constexpr int kVibrationRow = 0;
 constexpr int kMappingRow = 1;
@@ -163,6 +164,10 @@ std::vector<Option> options(int category, const GameSettings &game, Preferences 
                          tr("Right Joy-Con")},
                         game.controller, tr("Automatic")});
         break;
+    case category_system:
+        rows.push_back({tr("RNG seed"), {"0"}, game.rng_seed >= 0 ? 0 : -1,
+                        game.rng_seed >= 0 ? "0" : tr("Time-based")});
+        break;
     default:
         rows.push_back({tr("Language"), services.language_labels(), game.language,
                         pick(services.language_labels(), prefs.language)});
@@ -203,6 +208,9 @@ GameSettings with_option(GameSettings game, int category, int row, int value, co
             game.own_mapping = value >= 0;
         }
         break;
+    case category_system:
+        game.rng_seed = value < 0 ? -1 : 0;
+        break;
     default:
         game.language = value;
         break;
@@ -228,6 +236,8 @@ int Launcher::game_overrides(int category) const
         return (game.volume >= 0) + (game.mute >= 0);
     case category_controls:
         return (game.vibration >= 0) + game.own_mapping + (game.controller >= 0);
+    case category_system:
+        return game.rng_seed >= 0;
     default:
         return game.language >= 0;
     }

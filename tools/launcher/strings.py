@@ -169,6 +169,9 @@ NOTES = {
     "Selected ROM is no longer available": "Why a game did not start (the file is gone).",
     "PS5 controller initialization failed": "Why a game did not start.",
     "Performance": "A settings category: options that make games run faster, at some cost in accuracy.",
+    "System": "Console behaviour settings.",
+    "RNG seed": "Manually chosen fixed seed.",
+    "Time-based": "Normal behaviour.",
     "Compile ahead": "A switch: the program code a game used in earlier sessions is prepared (compiled) "
                      "while the game starts. Keep it short.",
     "Asynchronous shaders": "A switch. A shader is a small graphics program; keep the word the language's "

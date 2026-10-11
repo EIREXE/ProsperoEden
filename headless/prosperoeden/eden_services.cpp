@@ -906,6 +906,7 @@ pe::ui::GameSettings EdenServices::game_settings(std::uint64_t title_id) {
     result.own_mapping = saved.own_mapping;
     result.mapping = saved.mapping;
     result.performance = saved.performance;
+    result.rng_seed = saved.rng_seed;
     return result;
 }
 
@@ -927,6 +928,7 @@ bool EdenServices::set_game_settings(std::uint64_t title_id, const pe::ui::GameS
     value.own_mapping = settings.own_mapping;
     value.mapping = settings.mapping;
     value.performance = settings.performance;
+    value.rng_seed = settings.rng_seed;
     const bool saved = Eden::SaveGameSettings(title_id, value);
     if (!saved) Eden::Report("settings", "Could not write game settings");
     return saved;

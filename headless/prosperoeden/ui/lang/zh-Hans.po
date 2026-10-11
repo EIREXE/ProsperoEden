@@ -152,7 +152,7 @@ msgid "Automatic"
 msgstr "自动"
 
 #. Button hint: go back one screen.
-#: pe/ui/browse.cpp, pe/ui/game_options.cpp, pe/ui/library.cpp, pe/ui/pairing.cpp, pe/ui/profiles.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
+#: pe/ui/browse.cpp, pe/ui/game_options.cpp, pe/ui/library.cpp, pe/ui/multiplayer.cpp, pe/ui/pairing.cpp, pe/ui/profiles.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
 msgid "Back"
 msgstr "返回"
 
@@ -171,7 +171,7 @@ msgid "Bilinear"
 msgstr "双线性"
 
 #. Button hint: move through the list.
-#: pe/ui/browse.cpp
+#: pe/ui/browse.cpp, pe/ui/multiplayer.cpp
 msgid "Browse"
 msgstr "浏览"
 
@@ -1218,7 +1218,7 @@ msgstr "没有可导入的内容"
 msgid "Off"
 msgstr "关"
 
-#: pe/ui/settings.cpp
+#: pe/ui/multiplayer.cpp, pe/ui/settings.cpp
 msgid "Offline"
 msgstr "离线"
 
@@ -1265,7 +1265,7 @@ msgid "Output resolution"
 msgstr "输出分辨率"
 
 #. Button hint: jump a page of the list (L1 / R1).
-#: pe/ui/browse.cpp, pe/ui/update.cpp
+#: pe/ui/browse.cpp, pe/ui/multiplayer.cpp, pe/ui/update.cpp
 msgid "Page"
 msgstr "翻页"
 
@@ -1573,6 +1573,11 @@ msgstr "右 Joy-Con"
 msgid "Right stick press"
 msgstr "按下右摇杆"
 
+#. Manually chosen fixed seed.
+#: pe/ui/game_options.cpp
+msgid "RNG seed"
+msgstr "RNG seed"
+
 #: eden_services.cpp, pe/ui/launcher.cpp
 msgid "ROM missing from the game files folder"
 msgstr "游戏文件的文件夹中缺少 ROM"
@@ -1692,7 +1697,7 @@ msgid "Scroll"
 msgstr "滚动"
 
 #. Button hint: choose the highlighted item (not the Select button).
-#: pe/ui/game_options.cpp, pe/ui/home.cpp, pe/ui/library.cpp, pe/ui/pairing.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
+#: pe/ui/game_options.cpp, pe/ui/home.cpp, pe/ui/library.cpp, pe/ui/multiplayer.cpp, pe/ui/pairing.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
 msgid "Select"
 msgstr "确定"
 
@@ -1856,6 +1861,11 @@ msgstr "再次同步存档数据。"
 msgid "Syncing save data"
 msgstr "正在同步存档数据"
 
+#. Console behaviour settings.
+#: pe/ui/game_options.cpp, pe/ui/library.cpp
+msgid "System"
+msgstr "System"
+
 #: eden_services.cpp
 msgid "Taiwan"
 msgstr "台湾"
@@ -1991,6 +2001,11 @@ msgstr "无法保存此游戏的设置（没有游戏 ID）。"
 #: pe/ui/multiplayer.cpp
 msgid "This room uses a different protocol version."
 msgstr "此房间使用不同的协议版本。"
+
+#. Normal behaviour.
+#: pe/ui/game_options.cpp
+msgid "Time-based"
+msgstr "Time-based"
 
 #. ryujinx/, save-import/ and roms/ are folder names (unchanged); {0} is the game's ID.
 #: eden_services.cpp

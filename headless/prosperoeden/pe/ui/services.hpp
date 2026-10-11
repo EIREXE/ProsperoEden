@@ -339,6 +339,7 @@ struct GameSettings
     // The Performance switches, in the order of Preferences: block list, async shaders, fast GPU,
     // unsafe CPU, unsafe DMA, reactive flushing, skip invalidation.
     std::array<int, 7> performance{-1, -1, -1, -1, -1, -1, -1};
+    int64_t rng_seed = -1;
 };
 
 // One cheat of a mod that lists several: each is chosen on its own.

@@ -152,7 +152,7 @@ msgid "Automatic"
 msgstr "Automatico"
 
 #. Button hint: go back one screen.
-#: pe/ui/browse.cpp, pe/ui/game_options.cpp, pe/ui/library.cpp, pe/ui/pairing.cpp, pe/ui/profiles.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
+#: pe/ui/browse.cpp, pe/ui/game_options.cpp, pe/ui/library.cpp, pe/ui/multiplayer.cpp, pe/ui/pairing.cpp, pe/ui/profiles.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
 msgid "Back"
 msgstr "Indietro"
 
@@ -171,7 +171,7 @@ msgid "Bilinear"
 msgstr "Bilineare"
 
 #. Button hint: move through the list.
-#: pe/ui/browse.cpp
+#: pe/ui/browse.cpp, pe/ui/multiplayer.cpp
 msgid "Browse"
 msgstr "Scorri"
 
@@ -1218,7 +1218,7 @@ msgstr "Niente da importare"
 msgid "Off"
 msgstr "Non attivo"
 
-#: pe/ui/settings.cpp
+#: pe/ui/multiplayer.cpp, pe/ui/settings.cpp
 msgid "Offline"
 msgstr "Offline"
 
@@ -1265,7 +1265,7 @@ msgid "Output resolution"
 msgstr "Risoluzione di uscita"
 
 #. Button hint: jump a page of the list (L1 / R1).
-#: pe/ui/browse.cpp, pe/ui/update.cpp
+#: pe/ui/browse.cpp, pe/ui/multiplayer.cpp, pe/ui/update.cpp
 msgid "Page"
 msgstr "Pagina"
 
@@ -1573,6 +1573,11 @@ msgstr "Joy-Con destro"
 msgid "Right stick press"
 msgstr "Pressione levetta destra"
 
+#. Manually chosen fixed seed.
+#: pe/ui/game_options.cpp
+msgid "RNG seed"
+msgstr "RNG seed"
+
 #: eden_services.cpp, pe/ui/launcher.cpp
 msgid "ROM missing from the game files folder"
 msgstr "ROM mancante nella cartella dei file di gioco"
@@ -1692,7 +1697,7 @@ msgid "Scroll"
 msgstr "Scorri"
 
 #. Button hint: choose the highlighted item (not the Select button).
-#: pe/ui/game_options.cpp, pe/ui/home.cpp, pe/ui/library.cpp, pe/ui/pairing.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
+#: pe/ui/game_options.cpp, pe/ui/home.cpp, pe/ui/library.cpp, pe/ui/multiplayer.cpp, pe/ui/pairing.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
 msgid "Select"
 msgstr "Seleziona"
 
@@ -1856,6 +1861,11 @@ msgstr "Sincronizza i salvataggi ancora una volta."
 msgid "Syncing save data"
 msgstr "Sincronizzazione dei salvataggi"
 
+#. Console behaviour settings.
+#: pe/ui/game_options.cpp, pe/ui/library.cpp
+msgid "System"
+msgstr "System"
+
 #: eden_services.cpp
 msgid "Taiwan"
 msgstr "Taiwan"
@@ -1991,6 +2001,11 @@ msgstr "Impossibile salvare le impostazioni di questo gioco (nessun ID titolo)."
 #: pe/ui/multiplayer.cpp
 msgid "This room uses a different protocol version."
 msgstr "Questa stanza usa una versione diversa del protocollo."
+
+#. Normal behaviour.
+#: pe/ui/game_options.cpp
+msgid "Time-based"
+msgstr "Time-based"
 
 #. ryujinx/, save-import/ and roms/ are folder names (unchanged); {0} is the game's ID.
 #: eden_services.cpp

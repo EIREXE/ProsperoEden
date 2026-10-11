@@ -152,7 +152,7 @@ msgid "Automatic"
 msgstr "تلقائي"
 
 #. Button hint: go back one screen.
-#: pe/ui/browse.cpp, pe/ui/game_options.cpp, pe/ui/library.cpp, pe/ui/pairing.cpp, pe/ui/profiles.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
+#: pe/ui/browse.cpp, pe/ui/game_options.cpp, pe/ui/library.cpp, pe/ui/multiplayer.cpp, pe/ui/pairing.cpp, pe/ui/profiles.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
 msgid "Back"
 msgstr "رجوع"
 
@@ -171,7 +171,7 @@ msgid "Bilinear"
 msgstr "خطي ثنائي"
 
 #. Button hint: move through the list.
-#: pe/ui/browse.cpp
+#: pe/ui/browse.cpp, pe/ui/multiplayer.cpp
 msgid "Browse"
 msgstr "تصفّح"
 
@@ -1218,7 +1218,7 @@ msgstr "لا شيء للاستيراد"
 msgid "Off"
 msgstr "إيقاف"
 
-#: pe/ui/settings.cpp
+#: pe/ui/multiplayer.cpp, pe/ui/settings.cpp
 msgid "Offline"
 msgstr "غير متصل"
 
@@ -1265,7 +1265,7 @@ msgid "Output resolution"
 msgstr "دقة الإخراج"
 
 #. Button hint: jump a page of the list (L1 / R1).
-#: pe/ui/browse.cpp, pe/ui/update.cpp
+#: pe/ui/browse.cpp, pe/ui/multiplayer.cpp, pe/ui/update.cpp
 msgid "Page"
 msgstr "صفحة"
 
@@ -1573,6 +1573,11 @@ msgstr "Joy-Con الأيمن"
 msgid "Right stick press"
 msgstr "ضغط العصا اليمنى"
 
+#. Manually chosen fixed seed.
+#: pe/ui/game_options.cpp
+msgid "RNG seed"
+msgstr "RNG seed"
+
 #: eden_services.cpp, pe/ui/launcher.cpp
 msgid "ROM missing from the game files folder"
 msgstr "ملف ROM مفقود من مجلد ملفات الألعاب"
@@ -1692,7 +1697,7 @@ msgid "Scroll"
 msgstr "تمرير"
 
 #. Button hint: choose the highlighted item (not the Select button).
-#: pe/ui/game_options.cpp, pe/ui/home.cpp, pe/ui/library.cpp, pe/ui/pairing.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
+#: pe/ui/game_options.cpp, pe/ui/home.cpp, pe/ui/library.cpp, pe/ui/multiplayer.cpp, pe/ui/pairing.cpp, pe/ui/remote.cpp, pe/ui/save_sync.cpp, pe/ui/settings.cpp, pe/ui/update.cpp
 msgid "Select"
 msgstr "اختيار"
 
@@ -1856,6 +1861,11 @@ msgstr "مزامنة بيانات الحفظ مرة أخرى."
 msgid "Syncing save data"
 msgstr "جارٍ مزامنة بيانات الحفظ"
 
+#. Console behaviour settings.
+#: pe/ui/game_options.cpp, pe/ui/library.cpp
+msgid "System"
+msgstr "System"
+
 #: eden_services.cpp
 msgid "Taiwan"
 msgstr "تايوان"
@@ -1991,6 +2001,11 @@ msgstr "تعذّر حفظ إعدادات هذه اللعبة (لا يوجد مع
 #: pe/ui/multiplayer.cpp
 msgid "This room uses a different protocol version."
 msgstr "تستخدم هذه الغرفة إصدار بروتوكول مختلفًا."
+
+#. Normal behaviour.
+#: pe/ui/game_options.cpp
+msgid "Time-based"
+msgstr "Time-based"
 
 #. ryujinx/, save-import/ and roms/ are folder names (unchanged); {0} is the game's ID.
 #: eden_services.cpp
