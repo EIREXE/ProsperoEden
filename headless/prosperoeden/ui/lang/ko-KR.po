@@ -570,6 +570,11 @@ msgstr "PlayStation 5용 Eden 에뮬레이터"
 msgid "Eden's debug messages in the logs of a game."
 msgstr "게임 로그에 Eden의 디버그 메시지를 남깁니다."
 
+#. A button hint: opens the keyboard to type a number. One short word, and not the word used for Change.
+#: pe/ui/game_options.cpp
+msgid "Edit"
+msgstr "편집"
+
 #. Label of the shortcut that ends the running game.
 #: pe/ui/settings.cpp
 msgid "END GAME"
@@ -586,6 +591,11 @@ msgstr "영어(영국)"
 #: host/fake_services.cpp, settings_store.h
 msgid "English (US)"
 msgstr "영어(미국)"
+
+#. Shown when what was typed for the RNG seed is not such a number.
+#: pe/ui/game_options.cpp
+msgid "Enter a number between 0 and 4294967295."
+msgstr "0에서 4294967295 사이의 숫자를 입력하세요."
 
 #: pe/ui/multiplayer.cpp
 msgid "Enter a UDP port between 1 and 65535."
@@ -1481,6 +1491,11 @@ msgstr "대기 중"
 msgid "Queued, from {0}"
 msgstr "대기 중, {0}에서"
 
+#. The usual value of RNG seed: no fixed seed, a new random one at every start of the game.
+#: pe/ui/game_options.cpp
+msgid "Random"
+msgstr "무작위"
+
 #. A switch, on by default: what a game reads back from the graphics processor is kept exact. Keep the term the language's emulator players use, or translate it plainly.
 #: pe/ui/game_options.cpp, pe/ui/settings.cpp
 msgid "Reactive flushing"
@@ -1573,10 +1588,10 @@ msgstr "Joy-Con (R)"
 msgid "Right stick press"
 msgstr "오른쪽 스틱 누르기"
 
-#. Manually chosen fixed seed.
+#. A game setting. RNG is a random number generator and the seed is the number it starts from. A game with a seed is loaded at the same place in memory at every start, which some mods need. Keep it short; RNG and seed may stay in English where players say them so.
 #: pe/ui/game_options.cpp
 msgid "RNG seed"
-msgstr "RNG seed"
+msgstr "RNG 시드"
 
 #: eden_services.cpp, pe/ui/launcher.cpp
 msgid "ROM missing from the game files folder"
@@ -1861,10 +1876,10 @@ msgstr "세이브 데이터를 한 번 더 동기화합니다."
 msgid "Syncing save data"
 msgstr "세이브 데이터 동기화 중"
 
-#. Console behaviour settings.
+#. A category of a game's settings: how the emulated console itself behaves.
 #: pe/ui/game_options.cpp, pe/ui/library.cpp
 msgid "System"
-msgstr "System"
+msgstr "시스템"
 
 #: eden_services.cpp
 msgid "Taiwan"
@@ -1928,7 +1943,7 @@ msgstr "세이브 데이터 동기화가 끝나면 게임이 시작됩니다."
 msgid "The game starts when the download is done."
 msgstr "다운로드가 끝나면 게임이 시작됩니다."
 
-#: pe/ui/multiplayer.cpp
+#: pe/ui/game_options.cpp, pe/ui/multiplayer.cpp
 msgid "The keyboard could not be opened."
 msgstr "키보드를 열 수 없습니다."
 
@@ -2001,11 +2016,6 @@ msgstr "이 게임의 설정을 저장할 수 없습니다(타이틀 ID 없음).
 #: pe/ui/multiplayer.cpp
 msgid "This room uses a different protocol version."
 msgstr "이 방은 다른 프로토콜 버전을 사용합니다."
-
-#. Normal behaviour.
-#: pe/ui/game_options.cpp
-msgid "Time-based"
-msgstr "Time-based"
 
 #. ryujinx/, save-import/ and roms/ are folder names (unchanged); {0} is the game's ID.
 #: eden_services.cpp

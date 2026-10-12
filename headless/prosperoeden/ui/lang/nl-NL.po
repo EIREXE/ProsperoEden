@@ -570,6 +570,11 @@ msgstr "Eden-emulator voor PlayStation 5"
 msgid "Eden's debug messages in the logs of a game."
 msgstr "De debugberichten van Eden in de logs van een game."
 
+#. A button hint: opens the keyboard to type a number. One short word, and not the word used for Change.
+#: pe/ui/game_options.cpp
+msgid "Edit"
+msgstr "Bewerken"
+
 #. Label of the shortcut that ends the running game.
 #: pe/ui/settings.cpp
 msgid "END GAME"
@@ -586,6 +591,11 @@ msgstr "Engels (VK)"
 #: host/fake_services.cpp, settings_store.h
 msgid "English (US)"
 msgstr "Engels (VS)"
+
+#. Shown when what was typed for the RNG seed is not such a number.
+#: pe/ui/game_options.cpp
+msgid "Enter a number between 0 and 4294967295."
+msgstr "Voer een getal tussen 0 en 4294967295 in."
 
 #: pe/ui/multiplayer.cpp
 msgid "Enter a UDP port between 1 and 65535."
@@ -1481,6 +1491,11 @@ msgstr "In wachtrij"
 msgid "Queued, from {0}"
 msgstr "In wachtrij, van {0}"
 
+#. The usual value of RNG seed: no fixed seed, a new random one at every start of the game.
+#: pe/ui/game_options.cpp
+msgid "Random"
+msgstr "Willekeurig"
+
 #. A switch, on by default: what a game reads back from the graphics processor is kept exact. Keep the term the language's emulator players use, or translate it plainly.
 #: pe/ui/game_options.cpp, pe/ui/settings.cpp
 msgid "Reactive flushing"
@@ -1573,10 +1588,10 @@ msgstr "Rechter Joy-Con"
 msgid "Right stick press"
 msgstr "Rechterstick indrukken"
 
-#. Manually chosen fixed seed.
+#. A game setting. RNG is a random number generator and the seed is the number it starts from. A game with a seed is loaded at the same place in memory at every start, which some mods need. Keep it short; RNG and seed may stay in English where players say them so.
 #: pe/ui/game_options.cpp
 msgid "RNG seed"
-msgstr "RNG seed"
+msgstr "RNG-seed"
 
 #: eden_services.cpp, pe/ui/launcher.cpp
 msgid "ROM missing from the game files folder"
@@ -1861,10 +1876,10 @@ msgstr "De opgeslagen data nog een keer synchroniseren."
 msgid "Syncing save data"
 msgstr "Opgeslagen data synchroniseren"
 
-#. Console behaviour settings.
+#. A category of a game's settings: how the emulated console itself behaves.
 #: pe/ui/game_options.cpp, pe/ui/library.cpp
 msgid "System"
-msgstr "System"
+msgstr "Systeem"
 
 #: eden_services.cpp
 msgid "Taiwan"
@@ -1928,7 +1943,7 @@ msgstr "De game start zodra de opgeslagen data gelijk is."
 msgid "The game starts when the download is done."
 msgstr "De game start zodra de download klaar is."
 
-#: pe/ui/multiplayer.cpp
+#: pe/ui/game_options.cpp, pe/ui/multiplayer.cpp
 msgid "The keyboard could not be opened."
 msgstr "Het toetsenbord kon niet worden geopend."
 
@@ -2001,11 +2016,6 @@ msgstr "Kan de instellingen van deze game niet opslaan (geen titel-ID)."
 #: pe/ui/multiplayer.cpp
 msgid "This room uses a different protocol version."
 msgstr "Deze kamer gebruikt een andere protocolversie."
-
-#. Normal behaviour.
-#: pe/ui/game_options.cpp
-msgid "Time-based"
-msgstr "Time-based"
 
 #. ryujinx/, save-import/ and roms/ are folder names (unchanged); {0} is the game's ID.
 #: eden_services.cpp

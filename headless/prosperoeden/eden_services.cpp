@@ -523,6 +523,19 @@ std::optional<std::string> EdenServices::room_text(int field, const std::string&
     return Common::UTF16ToUTF8(answer.text);
 }
 
+std::optional<std::string> EdenServices::seed_text(const std::string& initial, const std::atomic<bool>& stop) {
+    Eden::TextRequest request;
+    request.title = u"RNG seed";
+    request.initial = Common::UTF8ToUTF16(initial);
+    request.max_length = 10;  // 4294967295
+    request.numbers = true;
+    const auto answer = Eden::AskSystemKeyboard(request, stop);
+    if (answer.outcome == Eden::TextOutcome::unavailable)
+        throw std::runtime_error("The system keyboard is unavailable");
+    if (answer.outcome != Eden::TextOutcome::accepted) return std::nullopt;
+    return Common::UTF16ToUTF8(answer.text);
+}
+
 EdenServices::EdenServices(std::string launch_error, Eden::Multiplayer::RoomClient& rooms)
     : rooms_(rooms), launch_error_(std::move(launch_error)) {
     (void)mkdir(Eden::ConfigDir().c_str(), 0777);
